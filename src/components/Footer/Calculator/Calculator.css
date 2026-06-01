@@ -1,0 +1,21 @@
+.Calculator {
+  display:flex;
+  flex-direction:column;
+  background-color:#679fe9;
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 2vh;
+  width: 545px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-form {
+    font-family: "Gelasio";
+    font-weight: 500;
+    font-size: 18px;
+}
+.entry-form-ammount {
+    align-self: left;
+}
