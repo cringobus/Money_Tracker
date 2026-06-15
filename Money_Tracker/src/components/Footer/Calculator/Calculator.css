@@ -1,0 +1,43 @@
+.Calculator {
+  display:flex;
+  flex-direction:column;
+  background-color:#679fe9;
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px;
+  margin-top: 2vh;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-form {
+    font-family: "Gelasio";
+    display:flex;
+    flex-direction:column;
+    font-weight: 500;
+    font-size: 18px;
+}
+.entry-form-ammount {
+    display:flex;
+    align-self: left;
+}
+
+.input {
+    height: 30px;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 7px;
+    border-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    height: 30px;
+    width: 60%;
+    margin-top: 10px;
+    border-radius: 7px;
+    border-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}

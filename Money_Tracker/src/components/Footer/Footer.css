@@ -1,0 +1,22 @@
+.footer {
+    justify-content: center;
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-content {
+    background-color:#2e4057;
+    width: 67vw;
+    /* height: 500px; */
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+}
+.footer-positions {
+    justify-content: center;
+    display:flex;
+    margin-top: 2vh;
+    gap: 20px;
+}
