@@ -1,11 +1,15 @@
-import './Calendar.css'
+﻿import './Calendar.css'
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'; // Default styling
 
-const Calendar = () => {
+export default function AppointmentCalendar() {
+  const [date, setDate] = useState(new Date());
+
   return (
-    <div className="Calendar">
-        <h1>Calendar</h1>
+    <div className="calendar-card">
+      <h3>Select a Date</h3>
+      <Calendar onChange={setDate} value={date} />
     </div>
   );
-};
-
-export default Calendar;
+}

@@ -1,50 +1,37 @@
-import { useState } from "react";
-import axios from "axios";
-import "./Calculator.css";
+import './Calculator.css'
+
+const handleClick = () => {
+  alert("Button clicked!");
+};
 
 const Calculator = () => {
-  const [ammount, setAmmount] = useState("");
-  const [purpose, setPurpose] = useState("");
-
-  const [serverResponse, setServerResponse] = useState([]);
-
-const createTransaction = async() => {
-  const response = await axios.post('http://localhost:3000/api/v1/transactions/create', {type: purpose, price: ammount})
-  setServerResponse(response.data.message)
-}
-
   return (
     <>
       <div className="Calculator">
-        <h1>Calculator</h1>
-        <hr />
-        <div className="entry-form">
-          <div className="entry-form-ammount">
-            <input 
-            name="ammount" 
-            value={ammount}
-            onChange={(e)=>{setAmmount(e.target.value)}}
-            placeholder='Enter ammount here'
-            className="input" 
-            />
+          <h1>Calculator</h1> 
+          <div className="entry-form">
+            <div className="entry-form-ammount">
+                <p style={{ alignSelf: 'left' }}>Ammount</p>
+                <input name="ammount" style={{ height: '30px', width: '150px' }}/>   
+            </div> 
+            <div className="entry-form-purpose">
+                <p style={{ alignSelf: 'right' }}>Purpose</p>
+                <input name="purpose" style={{ height: '30px', width: '150px' }}/>   
+            </div>
+            <div className="entry-form-category">
+                <p style={{ alignSelf: 'left' }}>Category</p>
+                <input name="category" style={{ height: '30px', width: '150px' }}/>    
+            </div>
+            <div className="entry-form-comment">
+                <p style={{ alignSelf: 'right' }}>Comment</p>
+                <input name="comment" style={{ height: '30px', width: '150px' }}/> 
+            </div>
           </div>
-          <div className="entry-form-ammount">
-            <input 
-            name="purpose"
-            value={purpose}
-            onChange={(e)=>{setPurpose(e.target.value)}}
-            placeholder='Enter purpose here' 
-            className="input" 
-            />
-          </div>
-          <button
-          onClick={()=>{createTransaction()}}
-          >
-            Add transaction
+          <button onClick={handleClick}>
+            Submit Data
           </button>
-          {serverResponse && <p>{serverResponse}</p>}
         </div>
-      </div>
+
     </>
   );
 };
