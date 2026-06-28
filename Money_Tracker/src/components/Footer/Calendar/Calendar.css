@@ -1,4 +1,8 @@
-﻿.Calendar {
+﻿.h3{
+  color: #e1ffd7;
+}
+
+.calendar-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +12,5 @@
   padding: 14px 20px;
   margin-top: 2vh;
   width: 560px;
+  color: #2e4057;
 }

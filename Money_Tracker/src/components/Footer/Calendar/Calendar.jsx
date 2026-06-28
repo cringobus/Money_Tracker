@@ -8,7 +8,7 @@ export default function AppointmentCalendar() {
 
   return (
     <div className="calendar-card">
-      <h3>Select a Date</h3>
+      <h3 className="h3">Select a Date</h3>
       <Calendar onChange={setDate} value={date} />
     </div>
   );
